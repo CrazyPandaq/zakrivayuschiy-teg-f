@@ -4,3 +4,91 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+  --text-font: "Inter-Variable", "serif";
+  --text-font-accent: "PressStart2P-Regular", "fantasy";
+  --title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --subtitle-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --title-weight: 700;
+  --text-weight: 400;
+  --main-color: #000;
+  --accent-color: #fff;
+  --contour-heart: #000;
+  --fill-heart: #ff0000;
+  --bg-color: #fff;
+  --bg-image: repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+}
+
+:root.theme-dark {
+  --text-font: "Inter-Variable", "serif";
+  --text-font-accent: "PressStart2P-Regular", "fantasy";
+  --title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --subtitle-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --title-weight: 785;
+  --text-weight: 465;
+  --main-color: #00cc14;
+  --accent-color: #000;
+  --contour-heart: #00cc14;
+  --fill-heart: #ff0000;
+  --bg-color: #000;
+  --bg-image: repeating-linear-gradient(
+      to bottom,
+      #000 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #007f0c 0.01%, #004306);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-font: "Inter-Variable", "serif";
+    --text-font-accent: "PressStart2P-Regular", "fantasy";
+    --title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --subtitle-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --title-weight: 700;
+    --text-weight: 400;
+    --main-color: #000;
+    --accent-color: #fff;
+    --contour-heart: #000;
+    --fill-heart: #ff0000;
+    --bg-color: #fff;
+    --bg-image: repeating-linear-gradient(
+        to bottom,
+        #d3d3d3 0 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-font: "Inter-Variable", "serif";
+    --text-font-accent: "PressStart2P-Regular", "fantasy";
+    --title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --subtitle-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --title-weight: 785;
+    --text-weight: 465;
+    --main-color: #00cc14;
+    --accent-color: #000;
+    --contour-heart: #00cc14;
+    --fill-heart: #ff0000;
+    --bg-color: #000;
+    --bg-image: repeating-linear-gradient(
+        to bottom,
+        #000 0 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
+      linear-gradient(to bottom, #007f0c 0.01%, #004306);
+  }
+}

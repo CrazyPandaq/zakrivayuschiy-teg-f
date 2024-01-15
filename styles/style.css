@@ -276,7 +276,7 @@
   transition-timing-function: ease;
 }
 
-.card__icon-button:focus{
+.card__icon-button:focus {
   outline: none;
 }
 
@@ -330,7 +330,6 @@
   z-index: 2;
   mix-blend-mode: difference;
 }
-
 
 /* dialog */
 
@@ -406,7 +405,7 @@ dialog::backdrop {
     inset-inline-end: 11px;
   }
 
-  .section__block{
+  .section__block {
     margin-bottom: 0px;
   }
 

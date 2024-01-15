@@ -425,12 +425,12 @@ dialog::backdrop {
 .button-animation {
   position: relative;
   height: 100%;
+  transition: box-shadow 0.3s;
+  transition-timing-function: ease;
 }
 
 .button-animation:focus {
   outline: none;
-  transition: box-shadow 0.3s;
-  transition-timing-function: ease;
 }
 
 .button-animation:focus-visible {
@@ -445,7 +445,7 @@ dialog::backdrop {
   top: 0px;
   left: 0px;
   display: block;
-  transition: width 0.5s;
+  transition: ease-in-out 0.5s;
   background-color: var(--main-color, #000);
 }
 

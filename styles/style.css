@@ -14,10 +14,6 @@
 
 */
 
-/* Добрый день! Возникла в голове путаница по поводу понятия основной селектор.
-Например ".button-animation:hover::before". Основным селектором ,как я понимаю, будет выстпупать .button-animation?
-*/
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -152,7 +148,7 @@
 .section__block {
   display: grid;
   gap: 51px;
-  margin-bottom: 54px;
+  margin-bottom: 52px;
 }
 
 .section__block-article {
@@ -280,8 +276,11 @@
   transition-timing-function: ease;
 }
 
-.card__icon-button:focus-visible {
+.card__icon-button:focus{
   outline: none;
+}
+
+.card__icon-button:focus-visible {
   border: 2px solid var(--main-color, #000);
 }
 
@@ -295,10 +294,14 @@
 }
 
 .button__text {
+  z-index: 2;
+  position: relative;
   font-size: 14px;
   font-family: var(--text-font-accent);
   line-height: 90%;
   padding: 0;
+  color: var(--accent-color, #fff);
+  mix-blend-mode: difference;
 }
 
 /* button save */
@@ -319,29 +322,15 @@
   padding-block-end: 15px;
 }
 
-.button-animation:hover .save-icon {
-  position: relative;
-  z-index: 2;
-  fill: var(--save-color, #fff);
-  transition: fill 0.5s;
-  transition-timing-function: ease;
-}
-
-.button-animation:not(:hover) .save-icon {
-  position: relative;
-  z-index: 2;
-  fill: var(--main-color, #000);
-  transition: fill 0.5s;
-  transition-timing-function: ease;
-}
-
 .save-icon {
-  fill: var(--main-color);
+  fill: var(--accent-color, #fff);
   width: 21px;
   height: 21px;
   position: relative;
   z-index: 2;
+  mix-blend-mode: difference;
 }
+
 
 /* dialog */
 
@@ -417,6 +406,10 @@ dialog::backdrop {
     inset-inline-end: 11px;
   }
 
+  .section__block{
+    margin-bottom: 0px;
+  }
+
   .save__button {
     flex-direction: column;
     inline-size: 306px;
@@ -454,25 +447,10 @@ dialog::backdrop {
   top: 0px;
   left: 0px;
   display: block;
-}
-
-.button-animation:hover .button__text {
-  position: relative;
-  z-index: 2;
-  color: var(--like-hover, #fff);
-  mix-blend-mode: difference;
+  transition: width 0.5s;
+  background-color: var(--main-color, #000);
 }
 
 .button-animation:hover::before {
   width: 100%;
-  left: 0;
-  top: 0;
-  transition: width 0.5s;
-  transition-timing-function: ease;
-  background-color: var(--main-color, #000);
-}
-
-.button-animation:not(:hover) .button__text {
-  position: relative;
-  z-index: 2;
 }
